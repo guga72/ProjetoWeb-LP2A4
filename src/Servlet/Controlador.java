@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import informacao.Cliente;
 import informacao.Cursos;
+import informacao.Pagamentos;
 
 
 @WebServlet("/Controlador")
@@ -63,10 +64,34 @@ public class Controlador extends HttpServlet {
 			c.alterar(nome, curso, valor, site);
 			response.sendRedirect("index.html");
 		}
+		
 		if(tipo.equals("currem")){
 			String curso = request.getParameter("inputCURSO");
 			Cursos c = new Cursos();
 			c.excluir(curso);
+			response.sendRedirect("index.html");
+		}
+		
+		if(tipo.equals("pagalt")) {
+			String cpf = request.getParameter("inputEmail3");
+			String curso = request.getParameter("inputCURSO");
+			String data_insc = request.getParameter("inputDATA");
+			Pagamentos p = new Pagamentos();
+			p.alterar(cpf, curso, data_insc);
+			response.sendRedirect("index.html");
+		}
+		if(tipo.equals("pagadd")) {
+			String cpf = request.getParameter("inputEmail3");
+			String curso = request.getParameter("inputCURSO");
+			String data_insc = request.getParameter("inputDATA");
+			Pagamentos p = new Pagamentos();
+			p.criar(cpf, curso, data_insc);
+			response.sendRedirect("index.html");
+		}
+		if(tipo.equals("pagrem")) {
+			String cpf = request.getParameter("inputEmail3");
+			Pagamentos p = new Pagamentos();
+			p.excluir(cpf);
 			response.sendRedirect("index.html");
 		}
 				

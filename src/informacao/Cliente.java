@@ -11,7 +11,6 @@ public class Cliente {
 	 static ArrayList<Cliente> clientes = new ArrayList();
 	 
 	 public static void criar(String nome1, String email1, String cpf1) {
-		 System.out.println("teste1");
 		 Cliente c = new Cliente();
 		 c.nome = nome1;
 		 c.email = email1;
