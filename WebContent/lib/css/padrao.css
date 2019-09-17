@@ -1,0 +1,13 @@
+.bgred {background: #d9534f;}
+.tt_menu {color:black;margin-bottom:20px; }
+.corrigir {margin-top: -30px !important;}
+.btn{
+	background-color:black;
+	color: white;
+}
+.navbar{
+	background-color: black;
+}
+.btn:hover{
+	background-color:red;
+}
