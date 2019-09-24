@@ -38,4 +38,15 @@ public class Cliente {
 			 }
 		 }
 	 }
+	 
+	 public static Cliente getCli(String cpf1) {
+		 int tam = clientes.size();
+		 for (int a = 0; a<tam; a++) {
+			 Cliente c = clientes.get(a);
+			 if (c.cpf == cpf1){
+			 return  c;
+			 }
+		 }
+		return null;
+	 }
 }

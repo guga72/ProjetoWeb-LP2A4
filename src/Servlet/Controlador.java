@@ -21,6 +21,11 @@ public class Controlador extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String tipo = request.getParameter("formulario");
+		if(tipo.equals("login")) {
+			String cpf = request.getParameter("inputEmail3");
+			String senha = request.getParameter("senha");			
+		}
+		
 		if(tipo.equals("cliadd")) {
 			String nome = request.getParameter("inputNome");
 			String email = request.getParameter("inputEMAIL");
