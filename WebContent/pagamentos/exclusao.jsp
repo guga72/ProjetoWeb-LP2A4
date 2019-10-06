@@ -1,4 +1,7 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <html><head>
+<%@ include file="../topo.jsp" %>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="text/javascript" src="../lib/js/jquery.min.js"></script>
@@ -66,7 +69,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12 text-center corrigir">
-            <a class="btn btn-default" href="javascript:window.history.go(-1)">Voltar</a>
+            <a class="btn btn-default" href="/ProjetoWEB/pagamentos/index.jsp">Voltar</a>
           </div>
         </div>
       </div>

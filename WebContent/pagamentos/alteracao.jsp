@@ -1,4 +1,7 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <html><head>
+<%@ include file="../topo.jsp" %>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="text/javascript" src="../lib/js/jquery.min.js"></script>
@@ -6,7 +9,6 @@
     <link href="../lib/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="../lib/css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="../lib/css/padrao.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src = "../lib/js/verificador_cpf.js"></script>
   </head><body>
     <div class="section section-danger text-justify">
       <div class="container">
@@ -21,40 +23,40 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12 text-center">
-            <h3 class="tt_menu">&gt;&gt; CLIENTES - CONSULTAR UM NOVO CLIENTE &lt;&lt;</h3>
+            <h3 class="tt_menu">&gt;&gt; PAGAMENTOS - ALTERAR UM PAGAMENTO &lt;&lt;</h3>
           </div>
         </div>
         <div class="row">
           <div class="col-md-12">
-            <form class="form-horizontal" role="form" type="submit" onsubmit= "Chama()" method = "post" id = "form" name = "form">
+            <form class="form-horizontal" role="form" type="submit" onsubmit= "Chama()" name = "form" action = "../Controlador" method = "post">
               <div class="form-group">
-                <div class="col-sm-2">
-                  <label for="inputEmail3" class="control-label">Informar o CPF:</label>
+                <div class="col-sm-3">
+                  <label for="inputCPF" class="control-label">Informar o CPF:</label>
                 </div>
-                <div class="col-sm-10">
-                  <input type="text" class="form-control" id="inputEmail3" placeholder="cpf" name = "inputEmail3" required>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" id="inputEmail3" placeholder="cpf" required>
                 </div>
               </div>
               <div class="form-group">
-                <div class="col-sm-2">
-                  <label for="inputNome" class="control-label">Informar o NOME:</label>
+                <div class="col-sm-3">
+                  <label for="inputCURSO" class="control-label">Informar o CURSO:</label>
                 </div>
-                <div class="col-sm-10">
-                  <input type="text" class="form-control" id="inputNome" placeholder="Nome" name ="inputNome">
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="col-sm-2">
-                  <label for="inputEMAIL" class="control-label">Informar o EMAIL:</label>
-                </div>
-                <div class="col-sm-10">
-                  <input type=text class="form-control" id="inputEMAIL" name = "inputEMAIL" required>
-                  <input type= "hidden" name="formulario" value = "cliadd">
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" id="inputCURSO" placeholder="CURSO">
                 </div>
               </div>
               <div class="form-group">
-                <div class="col-sm-offset-2 col-sm-10">
-                  <button type="submit" class="btn btn-danger" value = "submit">Cadastrar</button>
+                <div class="col-sm-3">
+                  <label for="inputDATA" class="control-label">Informar a NOVA DATA DE INSCRIÇÃO:</label>
+                </div>
+                <div class="col-sm-9">
+                  <input type="date" class="form-control" id="inputDATA" title="Preencha o campo Nome" required="">
+                  <input type= "hidden" name="formulario" value = "pagalt">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-sm-offset-3 col-sm-10">
+                  <button type="submit" class="btn btn-danger">Alterar</button>
                 </div>
               </div>
             </form>
@@ -66,7 +68,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12 text-center corrigir">
-            <a class="btn btn-default" href="javascript:window.history.go(-1)">Voltar</a>
+            <a class="btn btn-default" href="/ProjetoWEB/pagamentos/index.jsp">Voltar</a>
           </div>
         </div>
       </div>

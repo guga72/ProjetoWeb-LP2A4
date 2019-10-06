@@ -1,7 +1,7 @@
 function VerificarCPF(){
 	var cpf = document.getElementById("inputEmail3").value;
 	
-	regex = /^\d{3}\.\d{3}\.\d{3}\-\d{2}$/;
+	regex = /\d{3}.\d{3}.\d{3}-\d{2}/;
 	resultado = regex.test(cpf);
 	
 	

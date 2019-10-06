@@ -1,4 +1,7 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <html><head>
+<%@ include file="../topo.jsp" %>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="text/javascript" src="../lib/js/jquery.min.js"></script>
@@ -20,7 +23,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12 text-center">
-            <h3 class="tt_menu">&gt;&gt; CURSOS - CADASTRAR UM NOVO CURSO &lt;&lt;</h3>
+            <h3 class="tt_menu">&gt;&gt; CURSOS - ALTERAR UM CURSO &lt;&lt;</h3>
           </div>
         </div>
         <div class="row">
@@ -56,12 +59,12 @@
                 </div>
                 <div class="col-sm-10">
                   <input type="text" class="form-control" id="inputSITE" placeholder="Site">
-                  <input type= "hidden" name="formulario" value = "curadd">
+                  <input type= "hidden" name="formulario" value = "curalt">
                 </div>
               </div>
               <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">
-                  <button type="submit" class="btn btn-danger">Cadastrar</button>
+                  <button type="submit" class="btn btn-danger">Alterar</button>
                 </div>
               </div>
             </form>
@@ -73,7 +76,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12 text-center corrigir">
-            <a class="btn btn-default" href="javascript:window.history.go(-1)">Voltar</a>
+            <a class="btn btn-default" href="/ProjetoWEB/cursos/index.jsp">Voltar</a>
           </div>
         </div>
       </div>

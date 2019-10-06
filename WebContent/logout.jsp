@@ -31,7 +31,7 @@
                   <label for="inputEmail3" class="control-label">Deseja realmente sair da aplicação</label>
                 </div>
                 <div class="col-sm-10">
-                   <a href="login.jsp" class="btn btn-default">Fazer Logout</a>
+                   <button onclick= "logout()" class="btn btn-default">Fazer Logout</button>
                 </div>
               </div>
             </form>
@@ -48,5 +48,14 @@
         </div>
       </div>
     </footer>
+    <script>
+    function logout(){
+    	<%
+    	session.invalidate();
+    	response.sendRedirect("login.jsp");
+    	%>
+    	//location = "/ProjetoWEB/login.jsp";
+    }
+    </script>
 </body>      
 </html>

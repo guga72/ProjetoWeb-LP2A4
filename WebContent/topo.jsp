@@ -6,16 +6,14 @@
     <%@ page import="Servlet.Controlador" %>
     <%@ include file="login.jsp" %>
 <%
-String cpf = request.getParameter("inputEmail3");
-String senha = request.getParameter("senha");	
-if (cpf.equals("123.123.123-33") && senha.equals("1234") ){
-	request.getSession().setAttribute("theName",cpf);
-	response.sendRedirect("index.jsp");
-}
-else{
-	response.sendRedirect("login.jsp");
+String vali = (String)session.getAttribute("theName");
+if(vali == null){
+	%>
+	<script>
+	alert("Usuário não logado")
+	location = "/ProjetoWEB/login.jsp";
+	</script>
+	
+	<%
 }
 %>
-
-</body>
-</html>

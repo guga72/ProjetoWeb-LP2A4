@@ -1,52 +1,55 @@
 package informacao;
 
-import java.util.ArrayList;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
+@Entity
 public class Cliente {
 
-	String nome;
-	String email;
-	String cpf;
+	private String nome;
+	private String email;
+	private String cpf;
 	
-	 static ArrayList<Cliente> clientes = new ArrayList();
-	 
-	 public static void criar(String nome1, String email1, String cpf1) {
-		 Cliente c = new Cliente();
-		 c.nome = nome1;
-		 c.email = email1;
-		 c.cpf = cpf1;
-		 clientes.add(c);
+	
+	public Cliente(String nome, String email, String cpf) {
+		this.nome = nome;
+		this.email = email;
+		this.cpf = cpf;
+	}
+
+
+	public String getNome() {
+		return nome;
+	}
+
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+
+	public String getEmail() {
+		return email;
+	}
+
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+
+	public String getCpf() {
+		return cpf;
+	}
+
+
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
+	 @Override
+	 public String toString() {
+		return "Cliente cpf= " + cpf + " nome= " + nome + " email= " + email;
+		 
 	 }
 	 
-	 public static void alterar(String nome1, String email1, String cpf1) {
-		 int tam = clientes.size();
-		 for (int a = 0; a<tam; a++) {
-			 Cliente c = clientes.get(a);
-			 if (c.cpf == cpf1){
-				 c.email = email1;
-				 c.nome = nome1;
-			 }
-		 }
-	 }
-	 
-	 public static void excluir(String cpf1) {
-		 int tam = clientes.size();
-		 for (int a = 0; a<tam; a++) {
-			 Cliente c = clientes.get(a);
-			 if (c.cpf == cpf1){
-			 clientes.remove(a);
-			 }
-		 }
-	 }
-	 
-	 public static Cliente getCli(String cpf1) {
-		 int tam = clientes.size();
-		 for (int a = 0; a<tam; a++) {
-			 Cliente c = clientes.get(a);
-			 if (c.cpf == cpf1){
-			 return  c;
-			 }
-		 }
-		return null;
-	 }
 }

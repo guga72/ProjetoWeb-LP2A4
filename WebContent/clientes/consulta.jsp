@@ -1,4 +1,7 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <html><head>
+<%@ include file="../topo.jsp" %>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script type="text/javascript" src="../lib/js/jquery.min.js"></script>
@@ -25,7 +28,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <form class="form-horizontal" role="form" type="submit" onsubmit= "Chama()" name = "form">
+                        <form class="form-horizontal" role="form" type="submit" onsubmit= "Chama()" method="post" action = "../Controlador" name = "form">
                             <div class="form-group">
                                 <div class="col-sm-2">
                                     <label for="inputEmail3" class="control-label">Informar o CPF:</label>
@@ -33,6 +36,7 @@
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control" id="inputEmail3" placeholder="cpf" required>
                                 </div>
+                                <input type= "hidden" name="formulario" value = "clicon">
                             </div>
                             <div class="form-group">
                                 <div class="col-sm-offset-2 col-sm-10">
@@ -57,7 +61,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 text-center corrigir">
-                        <a class="btn btn-default" href="javascript:window.history.go(-1)">Voltar</a>
+                        <a class="btn btn-default" href="/ProjetoWEB/clientes/index.jsp">Voltar</a>
                     </div>
                 </div>
             </div>

@@ -1,4 +1,7 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <html><head>
+<%@ include file="../topo.jsp" %>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="text/javascript" src="../lib/js/jquery.min.js"></script>
@@ -10,7 +13,7 @@
     <div class="section section-danger text-justify">
       <div class="container">
         <div class="row text-center">
-          <div class="col-md-12 text-center" id = "topside">
+          <div class="col-md-12 text-center">
             <h1 class="text-center">Sistema de Gerenciamento de Cursos</h1>
           </div>
         </div>
@@ -20,13 +23,13 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12 text-center">
-            <h3 class="tt_menu">&gt;&gt; CLIENTES &lt;&lt;</h3>
+            <h3 class="tt_menu">&gt;&gt; CURSOS &lt;&lt;</h3>
             <div class="col-md-12  btn-group btn-group-lg btn-group-vertical">
-              <a href="#" class="btn btn-default">Consultar Todos os Clientes</a>
-              <a href="consulta.html" class="btn btn-default">Consultar um Cliente Específico</a>
-              <a href="cadastro.html" class="btn btn-default">Cadastrar um Novo Cliente</a>
-              <a href="alteracao.html" class="btn btn-default">Alterar um Cliente</a>
-              <a href="exclusao.html" class="btn btn-default">Excluir um Cliente</a>
+              <a href="#" class="btn btn-default">Consultar Todos os Cursos</a>
+              <a href="consulta.jsp" class="btn btn-default">Consultar um Curso Específico</a>
+              <a href="cadastro.jsp" class="btn btn-default">Cadastrar um Novo Curso</a>
+              <a href="alteracao.jsp" class="btn btn-default">Alterar um Curso</a>
+              <a href="exclusao.jsp" class="btn btn-default">Excluir um Curso</a>
             </div>
           </div>
         </div>

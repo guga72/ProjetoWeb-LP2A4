@@ -1,4 +1,7 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <html><head>
+<%@ include file="../topo.jsp" %>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="text/javascript" src="../lib/js/jquery.min.js"></script>
@@ -20,26 +23,23 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12 text-center">
-            <h3 class="tt_menu">&gt;&gt; CURSOS - CONSULTAR UM NOVO CURSO &lt;&lt;</h3>
+            <h3 class="tt_menu">&gt;&gt; PAGAMENTOS &lt;&lt;</h3>
+            <div class="col-md-12  btn-group btn-group-lg btn-group-vertical">
+              <a href="#" class="btn btn-default">Consultar Todos os Pagamentos</a>
+              <a href="consulta.jsp" class="btn btn-default">Consultar um Pagamento Específico</a>
+              <a href="cadastro.jsp" class="btn btn-default">Cadastrar um Novo Pagamento</a>
+              <a href="alteracao.jsp" class="btn btn-default">Alterar um Pagamento</a>
+              <a href="exclusao.jsp" class="btn btn-default">Excluir um Pagamento</a>
+            </div>
           </div>
         </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
         <div class="row">
-          <div class="col-md-12">
-            <form class="form-horizontal" role="form">
-              <div class="form-group">
-                <div class="col-sm-2">
-                  <label for="inputEmail3" class="control-label">Informar o CURSO:</label>
-                </div>
-                <div class="col-sm-10">
-                  <input type="text" class="form-control" id="inputEmail3" placeholder="CURSO" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="Digite um CPF no formato: xxx.xxx.xxx-xx" required="">
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="col-sm-offset-2 col-sm-10">
-                  <button type="submit" class="btn btn-danger">Consultar</button>
-                </div>
-              </div>
-            </form>
+          <div class="col-md-12 text-center corrigir">
+            <a class="btn btn-default" href="javascript:window.history.go(-1)">Voltar</a>
           </div>
         </div>
       </div>
@@ -53,15 +53,6 @@
         </div>
       </div>
     </footer>
-    <div class="section">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 text-center corrigir">
-            <a class="btn btn-default" href="javascript:window.history.go(-1)">Voltar</a>
-          </div>
-        </div>
-      </div>
-    </div>
   
 
 </body></html>

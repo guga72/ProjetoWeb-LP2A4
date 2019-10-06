@@ -1,43 +1,64 @@
 package informacao;
 
-import java.util.ArrayList;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
+@Entity
 public class Cursos {
-	String nome;
-	String curso;
-	String valor;
-	String site;
+	private String nome;
+	private String curso;
+	private float valor;
+	private String site;
 	
-	 ArrayList<Cursos> cursos = new ArrayList();
 	 
-	 public void criar(String nome1, String curso1, String valor1, String site1) {
-		 Cursos c = new Cursos();
-		 c.nome = nome1;
-		 c.curso = curso1;
-		 c.valor = valor1;
-		 c.site = site1;
-		 cursos.add(c);
-	 }
-	 
-	 public void alterar(String nome1, String curso1, String valor1, String site1) {
-		 int tam = cursos.size();
-		 for (int a = 0; a<tam; a++) {
-			 Cursos c = cursos.get(a);
-			 if (c.curso == curso1){
-				 c.valor = valor1;
-				 c.nome = nome1;
-				 c.site = site1;
-			 }
-		 }
-	 }
-	 
-	 public void excluir(String curso1) {
-		 int tam = cursos.size();
-		 for (int a = 0; a<tam; a++) {
-			 Cursos c = cursos.get(a);
-			if (c.curso == curso1){
-			 cursos.remove(a);
-			 }
-		 }
-	 }
+	public Cursos(String nome,String curso, float valor, String site) {
+		this.nome = nome;
+		this.curso = curso;
+		this.valor = valor;
+		this.site = site;
+	}
+
+
+	public String getNome() {
+		return nome;
+	}
+
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+
+	public String getCurso() {
+		return curso;
+	}
+
+
+	public void setCurso(String curso) {
+		this.curso = curso;
+	}
+
+
+	public float getValor() {
+		return valor;
+	}
+
+
+	public void setValor(float valor) {
+		this.valor = valor;
+	}
+
+
+	public String getSite() {
+		return site;
+	}
+
+
+	public void setSite(String site) {
+		this.site = site;
+	}
+	@Override
+	public String toString() {
+		return "Curso: nome= " + nome + " curso= " + curso + " valor= " + valor + " site= " + site;
+	}
 }
