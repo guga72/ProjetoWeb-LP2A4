@@ -2,8 +2,6 @@ package Servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
-import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -25,7 +23,8 @@ public class Controlador extends HttpServlet {
 	public String sessao_user;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		EntityManagerFactory emf = Persistence.createEntityManagerFactory("ProjetoWebPU");
+		System.out.println("teste");
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("projetoweb");
 		EntityManager em = emf.createEntityManager();
 		String tipo = request.getParameter("formulario");
 		if(tipo.equals("login")) {
@@ -237,7 +236,7 @@ public class Controlador extends HttpServlet {
 			}
 		}
 		if(tipo.equals("pagcon")) {
-			List<Pagamentos> pag = em.createQuery("Select * from pagamento").getResultList();
+			/*List<Pagamentos> pag = em.createQuery("Select * from pagamento").getResultList();
 			em.getTransaction().commit();
 			if (pag == null) {
 				PrintWriter out = response.getWriter();
@@ -254,7 +253,7 @@ public class Controlador extends HttpServlet {
 					out.println("<td>"+pag1.toString()+"</td>");
 				}
 				out.println("</tr>");
-			}
+			}*/
 		}
 		em.close();
 		emf.close();

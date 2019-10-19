@@ -8,12 +8,9 @@ import javax.persistence.Table;
 @Entity
 @Table(name="cliente")
 public class Cliente {
-	@Column(name = "nome")
 	private String nome;
-	@Column(name = "email")
 	private String email;
 	@Id
-	@Column(name = "cpf")
 	private String cpf;
 	
 	
