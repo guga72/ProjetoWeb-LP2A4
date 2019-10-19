@@ -25,7 +25,7 @@ public class Controlador extends HttpServlet {
 	public String sessao_user;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		EntityManagerFactory emf = Persistence.createEntityManagerFactory("ProjetoWEB");
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("ProjetoWebPU");
 		EntityManager em = emf.createEntityManager();
 		String tipo = request.getParameter("formulario");
 		if(tipo.equals("login")) {
