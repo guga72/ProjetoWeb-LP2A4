@@ -2,6 +2,8 @@ package Servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -235,9 +237,9 @@ public class Controlador extends HttpServlet {
 			}
 		}
 		if(tipo.equals("pagcon")) {
-			String cpf = request.getParameter("inputEmail3");
-			Pagamentos p = em.find(Pagamentos.class, cpf);
-			if (p == null) {
+			List<Pagamentos> pag = em.createQuery("Select * from pagamento").getResultList();
+			em.getTransaction().commit();
+			if (pag == null) {
 				PrintWriter out = response.getWriter();
 				out.println("<script type=\"text/javascript\">");
 				out.println("alert('Pagamento Não Cadastrado!');");
@@ -247,14 +249,15 @@ public class Controlador extends HttpServlet {
 			}
 			else {
 				PrintWriter out = response.getWriter();
-				out.println("<script type=\"text/javascript\">");
-				out.println("alert('"+p.toString()+"');");
-				out.println("location='/ProjetoWEB/clientes/index.jsp';");
-				out.println("</script>");
-				out.close();
+				out.println("<tr>");
+				for(Pagamentos pag1 : pag) {
+					out.println("<td>"+pag1.toString()+"</td>");
+				}
+				out.println("</tr>");
 			}
 		}
-				
+		em.close();
+		emf.close();
 	}
 
 

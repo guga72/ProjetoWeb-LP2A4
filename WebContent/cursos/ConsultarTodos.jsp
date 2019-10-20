@@ -30,8 +30,11 @@
           <div class="col-md-12">
             <form class="form-horizontal" role="form">
               <div class="form-group">
+              <div class="col-sm-2">
+              <label for="inputCURSO" class="control-label">CURSO:</label>
+              </div>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" id="inputEmail3" placeholder="CURSO" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="Digite um CPF no formato: xxx.xxx.xxx-xx" required="">
+                  <input type="text" class="form-control" id="inputCURSO" placeholder="CURSO" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="Digite um CPF no formato: xxx.xxx.xxx-xx" required="">
                   <input type= "hidden" name="formulario" value = "curcon">
                 </div>
               </div>

@@ -4,7 +4,6 @@
     <%@ page import="informacao.Cursos" %>
     <%@ page import="informacao.Pagamentos" %>
     <%@ page import="Servlet.Controlador" %>
-    <%@ include file="login.jsp" %>
 <%
 String vali = (String)session.getAttribute("theName");
 if(vali == null){

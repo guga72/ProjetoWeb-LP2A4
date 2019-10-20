@@ -27,9 +27,16 @@
           </div>
         </div>
         <div class="row">
+        
+         <input type= "hidden" name="formulario" value = "pagcon">
+        </div>
+        <!--<div class="row">
           <div class="col-md-12">
             <form class="form-horizontal" role="form" type="submit" onsubmit= "Chama()" name = "form">
               <div class="form-group">
+              <div class="col-sm-2">
+              <label for="inputEmail3" class="control-label">CPF:</label>
+              </div>
                 <div class="col-sm-10">
                   <input type="text" class="form-control" id="inputEmail3" placeholder="cpf" required>
                 </div>
@@ -52,7 +59,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div>-->
     <footer>
       <div class="navbar navbar-fixed-bottom bgred">
         <div class="container">
